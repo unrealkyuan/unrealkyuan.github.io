@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Favorite Things</title>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
+<!--CSS-->
+
+<style>
+* {
+font-family: 'Raleway', sans-serif;
+font-weight: 100;
+}
+.nav {
+margin: 0px;
+padding: 0px;
+width:1024px;
+list-style: none;
+}
+
+.nav li {
+float: left;
+width: 341px;
+position: relative;
+}
+
+.nav li a {
+background: #333;
+color: #fff;
+display: block;
+padding: 7px 8px;
+text-decoration: none;
+border-top: 1px solid #069;
+text-align:center;
+}
+
+.nav li a:hover {
+color: #069;
+}
+
+/*=== submenu ===*/
+
+.nav ul {
+display: none;
+position: absolute;
+margin-left: 0px;
+list-style: none;
+padding: 0px;
+}
+
+.nav ul li {
+width: 341px;
+float: left;
+}
+
+.nav ul a {
+display: block;
+height: 15px;
+padding: 7px 8px;
+color: #fff;
+text-decoration: none;
+border-bottom: 1px solid #222;
+}
+
+.nav ul li a:hover {
+color: #069;
+}
+h2 {
+font-family: "Comic Sans MS", cursive;
+}
+
+li {
+font-family:"Times New Roman", Times, serif;
+}
+
+h1 {
+color: white;
+}
+
+a:link {
+   color: #FFF;
+}
+
+a:visited {
+   color: #999;
+}
+
+a:hover {
+   color: #333;
+}
+
+/*container*/
+#container {
+width:1024px;
+margin:0 auto;
+}
+
+/*header*/
+#header {
+background-color: #5B6CAC;
+width:1024px;
+height:100px;
+padding-top:15px;
+}
+
+/*nav*/
+/*#nav {
+background-color: #CDE0FB;
+width:1024px;
+height:50px;
+}
+
+/*#nav ul {
+margin:0;
+padding:0;
+list-style:none;
+}
+#nav li {
+margin:0;
+padding:0;
+display:inline;
+}
+*/
+#nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+#nav li {
+   float: left;
+text-align:center;
+}
+#nav a {
+   display:block;
+   background-color:#CDE0FB;
+width:313px;
+height:35px;
+text-decoration:none;
+font-size:18px;
+padding-top:16px;
+}
+#nav a:hover {
+background-color: #FC0;
+}
+.rightBorder {
+border-right: 3px solid white;
+}
+a#selected {
+background-color: #FC0
+}
+
+/*main*/
+#main {
+background-color: #7E7891;
+width:663px;
+float:left;
+padding:10px;
+}
+#main p {
+font-family: "Papyrus";
+}
+#main h2{
+color: white;
+}
+
+/*sidebar*/
+#sidebar {
+background-color: #A6B8DB;
+width:331px;
+height:620px;
+float: right;
+padding:5px;
+}
+#sidebar h2{
+margin-left: 20px;
+}
+
+/*footer*/
+#footer {
+background-color: #282640;
+width:1024px;
+height:70px;
+clear:left;
+}
+</style>
+
+<!--Javascript-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   /* Next part of code handles hovering effect and submenu appearing */
+   $('.nav li').hover(function () { //appearing on hover
+       $('ul', this).fadeIn();
+     },
+     function () { //disappearing on hover
+       $('ul', this).fadeOut();
+     }
+   );
+ }
+);
+</script>
+
+</head>
+
+<body>
+
+<!--container-->
+<div id="container"> 
+
+<!--header-->
+<div id="header">
+<h1>My favorite things!</h1>
+</div>
+
+
+<!--Navigation-->
+<div class="navigation">
+ 	 <ul class="nav">
+ 	 <li>
+ 	 <a class = "rightBorder" href="homepage.html">Home</a>
+ 	 </li>
+ 	 <li>
+ 	 <a class = "rightBorder" href="#">Foods</a>
+ 	 <ul>
+ 	 <li><a href="chinesefood.html">Chinese Food</a></li>
+ 	 <li><a href="sandwiches.html">Sandwiches</a></li>
+ 	 <li><a href="chocolate.html">Chocolate</a></li>
+ 	 </ul>
+ 	 </li>
+ 	 <li>
+ 	 <a id = "selected" href="#">Sports</a>
+ 	 <ul>
+ 	 <li><a href="pingpong.html">Ping Pong</a></li>
+ 	 <li><a href="soccer.html">Soccer</a></li>
+ 	 <li><a href="#">Swimming</a></li>
+ 	 </ul>
+ 	 </li>
+ 	 </ul>
+ 	</div>
+<!--<div id="nav">
+<ul>
+<li><a class = "rightBorder" href = "../sandwich/index.html">Sandwiches</a></li>
+   <li><a class = "rightBorder" href = "../cantonesefood/index.html">Cantonese Food</a></li>
+   <li><a id = "selected" href = "index.html">Chocolate</a></li>
+</ul>
+</div>-->
+
+
+<!--main-->
+<div id = "main">
+<h2>Swimming</h2>
+<a href ="http://cache.boston.com/universal/site_graphics/blogs/bigpicture/swim_06_30/swim1.jpg">
+<img src="http://cache.boston.com/universal/site_graphics/blogs/bigpicture/swim_06_30/swim1.jpg" width="650" alt= "Good Sandwich"/></a>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+
+<!--sidebar-->
+<div id = "sidebar">
+<h2>How to play</h2>
+<ol>
+<li> incididunt ut labore et dolore magna</li>
+<li>ex ea commodo consequat. Duis aute irure</li>
+<li>voluptate velit esse cillum dolore eu fugiat nulla</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </li>
+<li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li> 
+<li>nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</li> 
+<li>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li> 
+<li>deserunt mollit anim id est laborum.</li>
+<li>Placeholder texttt</li>
+<li>Blah blah asddfa I will add actual descriptions later </li>
+<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li> 
+<li>nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</li> 
+<li>reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li> 
+<li>deserunt mollit anim id est laborum.</li>
+<li>Blah blah asddfa I will add actual descriptions </li>
+<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</li> 
+</ol>
+</div>
+
+
+<!--footer-->
+<div id = "footer"> <a href = "http://en.wikipedia.org/wiki/Swimming_(sport)">You can find out more here</a>
+<!--<a href = "http://www.google.com">Find out more about me</a>-->
+<p><a href = "#header">Go to TOP</a></p>
+</div>
+</div>
+</body>
+</html>
